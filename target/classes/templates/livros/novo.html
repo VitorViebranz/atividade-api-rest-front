@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo livro</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" th:href="@{/css/fallback.css}" />
+</head>
+<body class="bg-base-100 min-h-screen">
+<div th:replace="~{fragments/navbar :: menu}"></div>
+<main class="max-w-3xl mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-4">Novo livro</h1>
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <form th:action="@{/livros/salvar}" th:object="${objeto}" method="post" class="space-y-4">
+        <input type="hidden" th:field="*{id}" />
+
+        <div>
+          <label class="label">Título</label>
+          <input type="text" th:field="*{titulo}" class="input input-bordered w-full" />
+        </div>
+        <div>
+          <label class="label">Autor</label>
+          <input type="text" th:field="*{autor}" class="input input-bordered w-full" />
+        </div>
+        <div>
+          <label class="label">ISBN</label>
+          <input type="text" th:field="*{isbn}" class="input input-bordered w-full" />
+        </div>
+
+        <button class="btn btn-primary mt-4">Salvar</button>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>

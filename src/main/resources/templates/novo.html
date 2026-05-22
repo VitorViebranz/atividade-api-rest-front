@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo usuário</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" th:href="@{/css/fallback.css}" />
+</head>
+<body class="bg-base-100 min-h-screen">
+<div th:replace="~{fragments/navbar :: menu}"></div>
+<main class="max-w-3xl mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-4">Novo usuário</h1>
+  <div class="card bg-base-200 shadow">
+    <div class="card-body">
+      <form th:action="@{/salvar}" th:object="${objeto}" method="post" class="space-y-4">
+        <input type="hidden" th:field="*{id}" />
+
+        <div>
+          <label class="label">Nome</label>
+          <input type="text" th:field="*{nome}" class="input input-bordered w-full" />
+        </div>
+
+        <div>
+          <label class="label">E-mail</label>
+          <input type="email" th:field="*{email}" class="input input-bordered w-full" />
+        </div>
+
+        <div class="flex gap-2">
+          <button class="btn btn-primary mt-4">Salvar</button>
+          <a th:href="@{/}" class="btn btn-ghost mt-4">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>

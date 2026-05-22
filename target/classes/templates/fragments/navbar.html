@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" th:href="@{/css/fallback.css}" />
+</head>
+<body>
+<nav th:fragment="menu" class="navbar bg-base-200 shadow-sm px-4">
+  <div class="flex-1">
+    <a th:href="@{/}" class="btn btn-ghost text-xl">Biblioteca MVC</a>
+  </div>
+  <div class="flex gap-2">
+    <a th:href="@{/}" class="btn btn-sm btn-outline">Usuários</a>
+    <a th:href="@{/livros}" class="btn btn-sm btn-outline">Livros</a>
+    <a th:href="@{/emprestimos}" class="btn btn-sm btn-outline">Empréstimos</a>
+  </div>
+</nav>
+</body>
+</html>

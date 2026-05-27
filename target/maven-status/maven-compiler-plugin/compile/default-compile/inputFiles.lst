@@ -1,6 +1,7 @@
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/ApiApplication.java
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/controller/EmprestimoController.java
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/controller/LivroController.java
+/tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/controller/RelatorioController.java
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/controller/UsuarioController.java
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/entity/Emprestimo.java
 /tmp/workspace/VitorViebranz/atividade-api-rest-front/src/main/java/br/univille/poo2/api/entity/Livro.java

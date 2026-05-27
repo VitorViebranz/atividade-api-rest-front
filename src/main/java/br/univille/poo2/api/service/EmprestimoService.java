@@ -29,6 +29,14 @@ public class EmprestimoService {
         return emprestimoRepository.findAll();
     }
 
+    public long countAbertos() {
+        return emprestimoRepository.countByDataDevolucaoIsNull();
+    }
+
+    public long countDevolvidos() {
+        return emprestimoRepository.countByDataDevolucaoIsNotNull();
+    }
+
     @Transactional
     public Emprestimo realizarEmprestimo(Long usuarioId, Long livroId) {
         Usuario usuario = usuarioRepository.findById(usuarioId)

@@ -9,6 +9,7 @@ Aplicação Spring Boot para o gerenciamento de biblioteca com interface web MVC
 - `/` → CRUD de usuários
 - `/livros` → CRUD de livros
 - `/emprestimos` → empréstimos e devoluções
+- `/relatorios` → relatório de empréstimos
 
 ---
 
